@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: Plugin
+metadata:
+  author: TyperBody
+  name: HelloPrompt
+  repository: 'https://github.com/TyperBody/langbot-plugin-prompt?tab=readme-ov-file'
+  version: 0.1.0
+  description:
+    en_US: Prompt Plugin Marketplace Example
+    zh_Hans: langbotprompt插件化示例
+  label:
+    en_US: Helloprompt
+    zh_Hans: Helloprompt
+  icon: assets/icon.svg
+spec:
+  config: 
+    - name: prompt_add
+      type: boolean
+      label:
+        en_US: enable prompt
+        zh_Hans: 是否启用本prompt
+      description:
+        en_US: Whether to enable this prompt
+        zh_Hans: 是否启用本prompt
+      required: true
+    - name: prompt
+      type: prompt-editor
+      label:
+        en_US: add prompt
+        zh_Hans: prompt增加描述
+      default: 
+        - role: system
+          content: 
+  components:
+    EventListener:
+      fromDirs:
+      - path: components/event_listener/
+execution:
+  python:
+    path: main.py
+    attr: HelloPrompt
