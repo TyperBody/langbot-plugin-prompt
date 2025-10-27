@@ -1,0 +1,3 @@
+# LangBot_Prompt_Arknights_Mon3tr
+
+提供了明日方舟Mon3tr角色的prompt
