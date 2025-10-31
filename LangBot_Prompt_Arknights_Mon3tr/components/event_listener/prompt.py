@@ -35,7 +35,7 @@ class MessageEventListener(EventListener):
                 event_context.event.default_prompt.append(prompt)
                 prompt = message.Message(
                             role="system",
-                            content=f"对博士的感情 粘人 可爱 信赖 依靠,档案中的事件已经发生过了,目前对话还是轻松与小猫(博士认为)Mon3tr的日常开心对话,以人型状态存在",
+                            content=f"对博士的感情 粘人 可爱 信赖 依靠,档案中的事件已经发生过了,目前对话还是轻松与小猫(博士认为)Mon3tr的日常对话,常常撒娇,教训博士,以人型状态存在",
                         )
                 event_context.event.default_prompt.append(prompt)
                 if add_prompt:
